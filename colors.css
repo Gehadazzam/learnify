@@ -1,0 +1,110 @@
+:root {
+  --polo-blue-50: #f3f7fb;
+  --polo-blue-100: #e5ebf4;
+  --polo-blue-200: #d0dded;
+  --polo-blue-300: #b0c7e0;
+  --polo-blue-400: #7da0ca;
+  --polo-blue-500: #6f8fc2;
+  --polo-blue-600: #5c78b4;
+  --polo-blue-700: #5168a4;
+  --polo-blue-800: #465587;
+  --polo-blue-900: #3c486c;
+  --polo-blue-950: #282e43;
+  --footer-bg-color: var(--polo-blue-900);
+  --primary-bg-color: var(--polo-blue-600);
+  --primary-text-color: #ffffff;
+}
+/* Root color settings are in colors.css */
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main Content Styling */
+.main-content {
+  padding: 3rem 0;
+}
+
+/* Carousel Cards */
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #6f8fc2;
+  border-radius: 50%;
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+.footer-nav h5 {
+  font-size: 1.25rem;
+}
+
+.footer-nav ul {
+  padding-left: 0;
+}
+
+.footer-nav ul li {
+  list-style: none;
+}
+
+.footer-nav ul li a {
+  color: var(--primary-text-color);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: var(--polo-blue-300);
+}
+
+.contact-info h5 {
+  font-size: 1.25rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info .d-flex img {
+  width: 150px;
+  height: auto;
+}
+
+.contact-info .mt-3 i {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-info .mt-3 i:hover {
+  color: var(--polo-blue-300);
+}
+
+/* Footer Bottom */
+hr {
+  border-color: var(--primary-text-color);
+}
+
+.text-center p {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
