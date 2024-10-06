@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learnify</title>
+    <link rel="stylesheet" href="./style - Copy.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <div class="containerz">
+        <nav class="nav">
+            <div class="logo">
+                <img src="./images/D4wm96C44AAAAASUVORK5CYII.png" alt="Learnify" />
+            </div>
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="links">
+                <a href="Home">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="course">Courses</a>
+                    <div class="dropdown-content">
+                        <a href="#">Web Development</a>
+                        <a href="#">Mobile Development</a>
+                        <a href="#">Data Science</a>
+                        <a href="#">Game Development</a>
+                        <a href="#">DevOps</a>
+                        <a href="#">More..</a>
+                    </div>
+                </div>
+                <a href="">Skill Share</a>
+                <a href="">About Us</a>
+                <a href="">Contact</a>
+                <a href="" class="log">Login /Signup</a>
+
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="button">
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="parallax">
+                <div class="content">
+                    <h1 class="animate__animated animate__fadeInDown">Unlock Your Coding Potential</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">Learn to code, master skills, and start your freelancing journey.</p>
+                    <button class="btn btn-primary btn-lg animate__animated animate__bounceIn animate__delay-2s">Start Learning Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menu = document.querySelector(".menu");
+            const links = document.querySelector(".links");
+            const coursesToggle = document.querySelector(".course");
+            const dropdownContent = document.querySelector(".dropdown-content");
+
+            // Toggle main menu visibility
+            menu.addEventListener("click", function () {
+                links.style.display = links.style.display === "flex" ? "none" : "flex";
+                links.style.opacity = links.style.opacity === "1" ? "0" : "1";
+            });
+
+            // Toggle dropdown visibility
+            coursesToggle.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent the default anchor behavior
+                dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+            });
+
+            // Close the dropdown if clicked outside of it
+            window.addEventListener("click", function (event) {
+                if (!event.target.matches('.course') && !event.target.closest('.dropdown-content')) {
+                    dropdownContent.style.display = "none"; // Hide the dropdown
+                }
+            });
+        });
+    </script>
+</body>
+</html>
