@@ -1,0 +1,373 @@
+.nav {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+}
+
+.nav .logo {
+    padding-left: 2%;
+    width: 10%;
+}
+
+.nav .logo img {
+    width: 100%;
+    height: 70px;
+}
+
+.nav .links {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.nav .links a {
+    text-decoration: none;
+    color: rgb(60, 84, 190);
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    z-index: 1;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Adjust the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    z-index: 1;
+    width: auto;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu a {
+    color: rgb(60, 84, 190);
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+
+
+/* Button styles */
+.nav .btn {
+    background-color: #7aa3fc;
+    border: none;
+}
+
+.nav .btn:hover {
+    background-color: #2f5ab6;
+}
+
+/* Container styles */
+.nav .icons {
+    margin-right: 2%;
+    display: flex;
+    width: 8%;
+    justify-content: center;
+}
+
+.nav .icons i {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #7aa3fc;
+    padding-right: 10px;
+    color: white;
+}
+
+.nav .icons i:hover {
+    background-color: #2f5ab6;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: rgb(60, 84, 190);
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #e1e1e1;
+}
+
+.form-container {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    max-width: 400px;
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.toggle-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #7aa3fc;
+    border: none;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #2f5ab6;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+.log {
+    display: none;
+}
+
+.background {
+    background-image: url(./images/education-technology-online-learning-blue-background-open-book-digital-online-e-learning_252172-636_enhanced.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+
+    /* Hamburger menu styling */
+    .menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+        color: #7aa3fc;
+        cursor: pointer;
+        z-index: 10;
+        margin-right: 5%;
+        margin-top: 3px;
+    }
+
+    /* Initially hide the full menu links */
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100% !important;
+        position: absolute;
+        top: 50px;
+        right: 100%;
+        background-color: white;
+        z-index: 2000;
+        transition: right 0.3s ease-in-out;
+    }
+
+    /* Links take full width */
+    .links a {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd !important;
+    }
+
+    /* Adjust hover effect on links */
+    .links a:hover {
+        background-color: #e1e1e1;
+    }
+
+    /* Adjust logo size for mobile */
+    .nav .logo {
+        width: 20%;
+    }
+
+    /* Hide icons and buttons on mobile */
+    .nav .icons,
+    .nav .btn {
+        display: none;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown a {
+        display: block;
+    }
+
+    .dropdown .dropdown-content {
+        width: 100%;
+    }
+
+    .log {
+        display: block;
+        width: 100%;
+    }
+
+    .log a {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+/* animation part */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container {
+    animation: fadeIn 0.8s ease;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+input {
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards;
+}
+
+input:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+input:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+input:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+input:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+
+
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn:hover {
+    animation: pulse 0.5s infinite;
+    background-color: #3C54BE;
+    transition: background-color 0.3s ease;
+}
