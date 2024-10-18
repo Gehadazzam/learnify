@@ -33,11 +33,11 @@ import { CommonModule } from '@angular/common';
           <a href="">Contact</a>
           <a href="/register" class="log" >Login /Signup</a>
         </div>
-        <div class="icons">
+        <div class="icons" (click)="navigateToRegister()">
           <i class="fa-solid fa-user"></i>
         </div>
         <div class="button">
-          <button class="btn btn-primary">Get Started</button>
+          <button class="btn btn-primary"  (click)="navigateToRegister()">Get Started</button>
         </div>
       </nav>
     </div>

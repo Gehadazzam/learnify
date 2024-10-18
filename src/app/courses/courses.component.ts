@@ -338,7 +338,7 @@ import { Component } from '@angular/core';
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #9cb6dd;
+    background-color: #839dd1;
     color: white;
     padding: 15px 30px;
     font-size: 18px;
