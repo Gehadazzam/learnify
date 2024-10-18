@@ -15,6 +15,7 @@ import { RegisterComponent } from "../register/register.component";
 <app-intro></app-intro>
 <app-categories></app-categories>
 <app-skill-sharing></app-skill-sharing>
+<app-course-details></app-course-details>
 <app-courses></app-courses>
   `
 })
