@@ -29,8 +29,8 @@ import { CommonModule } from '@angular/common';
             </div>
           </div>
           <a href="">Skill Share</a>
-          <a href="">About Us</a>
-          <a href="">Contact</a>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact</a>
           <a href="/register" class="log" >Login /Signup</a>
         </div>
         <div class="icons" (click)="navigateToRegister()">
@@ -298,7 +298,9 @@ export class NavbarComponent {
   navigateToRegister() {
     window.location.href = '/register';
   }
-
+  navigateToContact() {
+    window.location.href = '/contact';
+  }
   navigateToLandpage() {
     window.location.href = '/landpage';
   }
